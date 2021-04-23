@@ -1,0 +1,11 @@
+version: "3"
+services:
+  steamcmd-ark:
+    build: .
+    image: gcslaoli/steamcmd-ark:root
+    volumes: 
+        - ./data/:/data/
+        # - ./data/logs/:/home/steam/Steam/logs/
+        # - ./data/steamcmd:/home/steam/steamcmd/
+    ports:
+      - 80:80 # 宿主机端口:容器端口
